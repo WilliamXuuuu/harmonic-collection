@@ -6,8 +6,8 @@
 }
 .gallery figure{ margin:0 }
 .gallery img{
-  width: 100px;%;
-  height: 150px;px;      /* 想更高就改这里 */
+  width: 200px;%;
+  height: 250px;px;      /* 想更高就改这里 */
   object-fit:cover;
   border-radius:10px;
   display:block;
