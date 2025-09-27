@@ -26,7 +26,6 @@ h1{margin:0 0 16px; font-size:clamp(26px,3.8vw,36px);}
 }
 .intro-block p{margin:0; color:var(--muted);}
 
-/* 图片网格：和 entry2 一样的朴素布局 */
 .gallery{
   margin-top:22px;
   display:grid;
