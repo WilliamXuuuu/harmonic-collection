@@ -34,11 +34,9 @@ html,body{
   margin:0; color:var(--muted); font-size:15.5px;
 }
 
-/* -- Gallery ------------------------------------------------- */
 .gallery{
   margin-top:22px;
   display:grid;
-  /* 自适应列数：卡片最小 230px，空间富余时自动多列 */
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
   gap:18px;
 }
@@ -58,10 +56,9 @@ figure:hover{
   border-color:rgba(255,255,255,.12);
 }
 
-/* 统一画幅：不会再出现某一张巨大的问题 */
 figure .ph{
   width:100%;
-  aspect-ratio: 4 / 3;        /* 4:3 画幅，更像相册 */
+  aspect-ratio: 4 / 3;        
   display:block;
   background:#0b0b0c center/cover no-repeat;
 }
@@ -72,12 +69,21 @@ figcaption{
   border-top:1px solid rgba(255,255,255,.06);
 }
 
-/* 顶部细黑条，和 entry2 氛围一致（可要可不要） */
 body::before{
   content:""; position:fixed; inset:0 0 auto 0; height:10px; background:#000;
 }
 
-/* 小屏优化 */
 @media (max-width:900px){
   .container{margin-top:48px;}
 }
+.gallery > figure{content-visibility:auto;contain-intrinsic-size:320px 240px;}
+figure{position:relative;}
+figure::after{
+  content:attr(data-cap);
+  position:absolute;left:0;right:0;bottom:0;
+  padding:10px 12px;
+  background:linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0));
+  color:#fff;font-size:14px;opacity:0;transition:.2s ease;
+}
+figure:hover::after{opacity:1;}
+figcaption{display:none;}
