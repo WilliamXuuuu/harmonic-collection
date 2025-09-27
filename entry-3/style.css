@@ -1,0 +1,84 @@
+:root{
+  --bg:#0e0e10;
+  --card:#141418;
+  --text:#e9e9ee;
+  --muted:#a8a8b3;
+  --accent:#ffd84a;
+}
+
+*{ box-sizing:border-box; }
+
+html,body{
+  margin:0;
+  padding:0;
+  background:var(--bg);
+  color:var(--text);
+  font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial;
+}
+
+.container{
+  max-width: 1100px;
+  margin: 40px auto 80px;
+  padding: 0 20px;
+}
+
+.hero{
+  margin-bottom: 28px;
+}
+
+.hero h1{
+  margin:0 0 10px;
+  font-size: clamp(28px, 4vw, 40px);
+  letter-spacing: .5px;
+}
+
+.hero p{
+  margin:0;
+  color: var(--muted);
+}
+
+/* 3×3 gallery */
+.gallery{
+  margin-top:24px;
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+figure{
+  margin:0;
+  background: var(--card);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+figure:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.35);
+}
+
+img{
+  width:100%;
+  height: 260px;           /* 统一高度，形成整齐网格 */
+  object-fit: cover;
+  display:block;
+}
+
+figcaption{
+  padding:10px 12px 12px;
+  font-size:14px;
+  color:var(--muted);
+  border-top: 1px solid rgba(255,255,255,.05);
+}
+
+/* 响应式 */
+@media (max-width: 900px){
+  .gallery{ grid-template-columns: repeat(2, 1fr); }
+  img{ height: 220px; }
+}
+@media (max-width: 520px){
+  .gallery{ grid-template-columns: 1fr; }
+  img{ height: 240px; }
+}
