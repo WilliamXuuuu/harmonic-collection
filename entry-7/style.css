@@ -1,65 +1,40 @@
-/* entry7.css */
-body {
-  background-color: #fafafa;
-  color: #111;
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.65;
+:root{
+  --bg:#f4f4f5;
+  --card:#ffffff;
+  --text:#111113;     
+  --muted:#64666a;
+  --shadow:0 2px 10px rgba(0,0,0,.06);
+  --radius:16px;
 }
 
-/* 标题部分 */
-h1 {
-  font-size: 2rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
-  margin-bottom: 1.5rem;
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Helvetica,Arial,ui-sans-serif,system-ui;
+  color:var(--text);
+  background:var(--bg);
+  line-height:1.6;
 }
 
-/* 卡片容器整体 */
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
+.container{max-width:1200px;margin:0 auto;padding:48px 20px 80px}
+.page-header{margin-bottom:28px}
+h1{font-size:clamp(28px,3.5vw,40px);line-height:1.15;margin:0 0 14px}
+.lead{margin:0;color:var(--muted);background:var(--card);border-radius:var(--radius);padding:16px 18px;box-shadow:var(--shadow);max-width:860px}
 
-/* 单个卡片 */
-article {
-  background: #fff;
-  border: 1px solid #e5e7eb;
-  border-radius: 1rem;
-  padding: 1.25rem 1.5rem;
-  transition: box-shadow 0.25s ease;
-}
+.grid{margin-top:28px;display:grid;grid-template-columns:repeat(12,1fr);gap:22px}
+.card{grid-column:span 4;background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(0,0,0,.05)}
+.meta{padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.badge{font-size:12px;color:#6b7280;background:#f6f7f8;border:1px solid #e5e7eb;border-radius:999px;padding:6px 10px}
+.hint{font-size:12px;color:#a3a3a3}
+.title{margin:0 16px 6px;font-size:16px;font-weight:700}
+.caption{margin:0 16px 18px;color:var(--muted);font-size:14px}
 
-article:hover {
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-}
 
-/* 时间标签 */
-article span {
-  font-size: 0.75rem;
-  letter-spacing: 0.03em;
+@media (max-width:1024px){
+  .card{grid-column:span 6}
 }
-
-/* 文字层次 */
-h3 {
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin: 0.5rem 0;
-}
-
-p {
-  font-size: 0.9rem;
-  color: #444;
-}
-
-/* 响应式优化 */
-@media (min-width: 640px) {
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+@media (max-width:640px){
+  .grid{gap:16px}
+  .card{grid-column:span 12}
+  .lead{border-radius:14px}
 }

@@ -1,73 +1,88 @@
-export default function Entry7RhythmOfMyDays() {
-  const sections = [
-    {
-      time: "8:00 AM",
-      title: "Waking up & cardio",
-      text:
-        "I usually wake up around eight or nine, sometimes even at eleven if I don’t have a morning class. On those days, I just sleep in a bit longer. After getting up, I play on my phone for a while, then change and go to the gym for some cardio. It helps me wake up and makes me feel more disciplined and refreshed for the rest of the day.",
-    },
-    {
-      time: "11:00 AM",
-      title: "Lunch & quick catch‑up",
-      text:
-        "Around eleven, I go get lunch. Most of the time I eat at the school cafeteria and talk with my friends while we eat. It’s a nice little break before the afternoon starts.",
-    },
-    {
-      time: "2:00 PM",
-      title: "Café focus block",
-      text:
-        "In the afternoon, I like to stay at a café near school. I do my homework there, listen to music, and just enjoy the vibe. It’s cozy, especially when I get a hot latte.",
-    },
-    {
-      time: "6:30 PM",
-      title: "Print session & class",
-      text:
-        "In the evening, I usually go print my assignments at school. My typography class has a lot of printing work this semester, so I spend quite some time there. After that, I get dinner and go to class.",
-    },
-    {
-      time: "10:00 PM",
-      title: "Wind‑down",
-      text:
-        "Around ten, I’m back in my dorm after class. I take a shower, lie in bed, and check my phone or play some games. If I have homework, I finish it; if not, I just listen to music and relax. Then I slowly fall asleep. It’s just an ordinary day, nothing special, but it feels peaceful.",
-    },
-  ];
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Entry 7 — The Rhythm of My Days</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="page-header">
+      <h1>Entry 7 — The Rhythm of My Days</h1>
+      <p class="lead">
+        My days in New York follow a soft rhythm that ties together school, art, and movement.
+        This entry records one ordinary day — from morning to night — in small moments.
+      </p>
+    </header>
 
-  return (
-    <main className="min-h-screen bg-zinc-50 text-zinc-900">
-      {/* Header */}
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-12">
-        <h1 className="text-3xl sm:text-4xl font-semibold tracking-tight mb-6">
-          Entry 7 — The Rhythm of My Days
-        </h1>
-        {/* Intro card */}
-        <div className="rounded-2xl bg-white/80 backdrop-blur shadow-sm ring-1 ring-zinc-200 p-6 sm:p-7 mb-10">
-          <p className="leading-relaxed text-zinc-700">
-            My days in New York follow a soft rhythm that ties together school, art, and movement. This entry is a
-            simple record of one ordinary day — from morning to night — told in small moments.
-          </p>
+    <section class="grid">
+      
+      <article class="card">
+        <div class="meta">
+          <span class="badge">8:00 AM</span>
+          <span class="hint">daily</span>
         </div>
+        <h3 class="title">Waking up &amp; cardio</h3>
+        <p class="caption">
+          I usually wake up around eight or nine, sometimes even at eleven if I don’t have a morning class.
+          I scroll for a bit, get changed, and head out for cardio. It wakes me up and gives me a sense of discipline
+          for the rest of the day.
+        </p>
+      </article>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sections.map((s, i) => (
-            <article
-              key={i}
-              className="group rounded-2xl bg-white shadow-sm ring-1 ring-zinc-200 overflow-hidden hover:shadow-md transition-shadow"
-            >
-              <div className="p-5 sm:p-6">
-                <div className="mb-2 flex items-center justify-between">
-                  <span className="inline-flex items-center rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 text-xs font-medium text-zinc-600">
-                    {s.time}
-                  </span>
-                  <span className="text-xs text-zinc-400">daily</span>
-                </div>
-                <h3 className="text-lg font-medium text-zinc-900 mb-2">{s.title}</h3>
-                <p className="text-sm leading-relaxed text-zinc-700">{s.text}</p>
-              </div>
-            </article>
-          ))}
+      
+      <article class="card">
+        <div class="meta">
+          <span class="badge">11:00 AM</span>
+          <span class="hint">daily</span>
         </div>
-      </div>
-    </main>
-  );
-}
+        <h3 class="title">Lunch &amp; quick catch-up</h3>
+        <p class="caption">
+          Around eleven, I grab lunch at the school cafeteria and chat with friends for a bit — a small break
+          before the afternoon really starts.
+        </p>
+      </article>
+
+      
+      <article class="card">
+        <div class="meta">
+          <span class="badge">2:00 PM</span>
+          <span class="hint">daily</span>
+        </div>
+        <h3 class="title">Café focus block</h3>
+        <p class="caption">
+          I like staying at a café near campus to do assignments and listen to music. I usually order a hot latte —
+          it’s cozy and keeps me focused.
+        </p>
+      </article>
+
+      
+      <article class="card">
+        <div class="meta">
+          <span class="badge">6:30 PM</span>
+          <span class="hint">daily</span>
+        </div>
+        <h3 class="title">Print session &amp; class</h3>
+        <p class="caption">
+          In the evening, I print my assignments — my typography class has a lot of print work this semester.
+          After printing, I grab dinner and go straight to class.
+        </p>
+      </article>
+
+      
+      <article class="card">
+        <div class="meta">
+          <span class="badge">10:00 PM</span>
+          <span class="hint">daily</span>
+        </div>
+        <h3 class="title">Wind-down</h3>
+        <p class="caption">
+          Around ten, I’m back in my dorm. I shower, lie down, check my phone or play some games.
+          If there’s homework I finish it; if not, I just listen to music and fall asleep.
+        </p>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
