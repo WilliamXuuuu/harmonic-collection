@@ -1,0 +1,65 @@
+/* entry7.css */
+body {
+  background-color: #fafafa;
+  color: #111;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.65;
+}
+
+/* 标题部分 */
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 1.5rem;
+}
+
+/* 卡片容器整体 */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+/* 单个卡片 */
+article {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  transition: box-shadow 0.25s ease;
+}
+
+article:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* 时间标签 */
+article span {
+  font-size: 0.75rem;
+  letter-spacing: 0.03em;
+}
+
+/* 文字层次 */
+h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0.5rem 0;
+}
+
+p {
+  font-size: 0.9rem;
+  color: #444;
+}
+
+/* 响应式优化 */
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
