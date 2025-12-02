@@ -3,10 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <link rel="stylesheet" href="style.css">
+  <title>Harmonic Collection · Homepage</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 40px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: #ffffff;
+      color: #111;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      color: #777;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      padding: 20px;
+      text-decoration: none;
+      color: #111;
+      background: #fafafa;
+      transition: 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background: #f0f0f0;
+    }
+
+    .card-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .desc {
+      color: #555;
+      font-size: 14px;
+    }
+  </style>
 </head>
+
 <body>
-  <div>It works!</div>
+
+  <h1>Harmonic Collection</h1>
+  <div class="subtitle">Homepage · Click an entry to view</div>
+
+  <div class="grid">
+
+    <a class="card" href="./entry-1/">
+      <div class="card-title">Entry 1</div>
+      <div class="desc">Be Liquid · Self Introduction</div>
+    </a>
+
+    <a class="card" href="./entry-2/">
+      <div class="card-title">Entry 2</div>
+      <div class="desc">NYC · Parsons Life</div>
+    </a>
+
+    <a class="card" href="./entry-3/">
+      <div class="card-title">Entry 3</div>
+      <div class="desc">Fitness · Transformation</div>
+    </a>
+
+    <a class="card" href="./entry-4/">
+      <div class="card-title">Entry 4</div>
+      <div class="desc">Artworks · Painting</div>
+    </a>
+
+    <a class="card" href="./entry-5/">
+      <div class="card-title">Entry 5</div>
+      <div class="desc">Coding Sketches · p5.js</div>
+    </a>
+
+    <a class="card" href="./entry-6/">
+      <div class="card-title">Entry 6</div>
+      <div class="desc">Shenzhen · Home Memories</div>
+    </a>
+
+    <a class="card" href="./entry-7/">
+      <div class="card-title">Entry 7</div>
+      <div class="desc">Daily Timeline · Routine</div>
+    </a>
+
+    <a class="card" href="./entry-8/">
+      <div class="card-title">Entry 8</div>
+      <div class="desc">Photo Growth · My Gallery</div>
+    </a>
+
+    <a class="card" href="./entry-9/">
+      <div class="card-title">Entry 9</div>
+      <div class="desc">Parsons School Life</div>
+    </a>
+
+  </div>
+
 </body>
 </html>
