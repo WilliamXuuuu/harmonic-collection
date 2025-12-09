@@ -21,6 +21,21 @@ html,body{
   padding:0 20px;
 }
 
+.entry-desc-box {
+  background: var(--bg);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin: 20px 0 40px 0;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+  border: 1px solid var(--border);
+}
+
+.entry-desc {
+  font-size: 17px;
+  color: var(--text);
+  line-height: 1.6;
+  margin: 0;
+}
 
 .gallery{
   margin-top:22px;
